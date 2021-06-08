@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Palyer Page</title>
+    <link rel="stylesheet" href="video.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+    <div class="container" style="margin: auto; text-align: center;">
+        <video id="video1" poster="Big Buck Bunny.jpg" src="Big Buck Bunny.mp4" playsinline></video>
+        <input type="range" id="scrollbar" min="0" value="0" class="video-controls"/>
+        <div id="countdown"><span></span></div>
+        <div id="play-btn" class="video-controls">PLAY</div>
+        <div id="pause-btn" class="video-controls">PAUSE</div>
+        <div id="mute-btn" class="video-controls">MUTE</div>
+        <div id="unmute-btn" class="video-controls">UNMUTE</div>
+        <div id="stop-btn" class="video-controls">STOP</div>
+        <div id="replay-btn" class="video-controls">REPLAY</div>
+        <input type="range" id="vol" max="1" min="0" step="0.01" value="0.5" class="video-controls" onmousemove="changevolume(this.value)"/>
+        <input type="range" id="speed" max="16" min="0" step="0.5" value="1" class="video-controls" onmousemove="changespeed(this.value)"/>
+        <label for="speed">Speed</label><br>
+        <input type="button" value="&lt;&lt;" id="begin" class="video-controls">
+        <input type="button" value="&lt;" id="backward" class="video-controls">
+        <input type="button" value="&gt;" id="forward" class="video-controls">
+        <input type="button" value="&gt;&gt;" id="finish" class="video-controls">
+        <div class="popup">
+            <video class="popuptext" src="Big Buck Bunny.mp4" id="myPopup"></video>
+        </div>
+    </div>
+    <script src="video.js"></script>
+</body>
+</html>
